@@ -16,11 +16,11 @@ def validateReport(report, allowedMistakes):
 
 def processInput():
     with open("day02.txt") as file:
-        return [list(map(int, line.strip().split())) for line in file]
+        return [[int(level) for level in line.split()] for line in file]
 
 def main():
     reports = processInput()
-    countReports = lambda m: sum([validateReport(r, m) for r in reports])
+    countReports = lambda allowedMistakes: sum([validateReport(report, allowedMistakes) for report in reports])
     print(f"Part one answer: {countReports(False)}")
     print(f"Part two answer: {countReports(True)}")
 
