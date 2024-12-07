@@ -1,3 +1,7 @@
+"""
+BROKEN -- takes WAYYYYYY TOOOOO LOONG!!!!!!
+"""
+
 blockers, visited, start = [], set(), ()
 width, height = 0, 0
 turnCycle = {(-1, 0): (0,1), (0,1): (1, 0), (1, 0): (0, -1), (0, -1): (-1, 0)}
