@@ -30,11 +30,12 @@ def blinkN(input, blinks = 25): # slower
 
 def processInput():
     with open("day11.txt") as file:
-        return [int(word) for word in file.readline().strip().split()]
+        return [int(word) for word in file.readline().split()]
     
 if __name__ == "__main__":
     input = processInput()
     print(f'Part one: {blinkNStones(input)}')
     print(f'Time to finish {time() - startTime}')
-    print(f'Part one: {blinkNStones(input, 75)}')
+    startTime = time()
+    print(f'Part two: {blinkNStones(input, 75)}')
     print(f'Time to finish {time() - startTime}')
